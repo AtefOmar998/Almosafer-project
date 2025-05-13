@@ -2,7 +2,7 @@
 
 // Test Case 1 : Verify that the user can register succesfully 
 describe("Test Register almosafer", () => {
-    it.skip("Register", () => {
+    it("Register", () => {
         
         let name = ["Ali", "Mohammed", "Sara", "Fatima"]; // to add a random names 
         let randomName = Math.floor(Math.random() * name.length);

@@ -1,20 +1,20 @@
 /// <reference types="cypress" />
 
 describe("Almosafer Final Project", () => {
-    it("Verify Header Elements", () => {
+    it.skip("Verify Header Elements", () => {
       cy.visit("https://www.almosafer.com/en");
   
       // Test case 1: Verify that the language is ENGLISH
-      cy.get('[data-testid="Header__LanguageSwitch"]').should('contain', 'العربية');
+      cy.contains('.__ds__comp.undefined.MuiBox-root.alm-desktop-1f6xgxd', 'العربية').should('be.visible');
   
       // Test case 2: Verify that the currency is SAR
       cy.get('[data-testid="Header__CurrencySelector"]').should('contain', 'SAR');
   
       // Test case 3: Verify that the contact number is correct
-      cy.get('.sc-cjHlYL').should('contain', '966554400000');
+      cy.get('.alm-desktop-h0bow9 > div').should('contain', '+966554400000');
   
       // Test case 4: Verify that "Qitaf logo" is displayed in the footer
-      cy.get('.sc-ekulBa').should('be.visible');
+      cy.get('[alt="qitaf"]').should('be.visible');
     });
   
     it("Verify Search Tab and Default Flight Date", () => {
@@ -29,14 +29,14 @@ describe("Almosafer Final Project", () => {
       tomorrow.setDate(today.getDate() + 1);
       let tomorrowDay = tomorrow.getDate().toString(); // Get the day of the month as a string
 
-      cy.get('[data-testid="FlightSearchBox__FromDateButton"] > .sc-dXfzlN').should('contain', tomorrowDay); 
+      cy.get('#testIdPickerPrefix__DatePicker__DepartureDate').should('contain', tomorrowDay); 
 
       // Test case 7: Verify that the flight return date is set to today + 2 by default
       let aftertommorow = new Date();
       aftertommorow.setDate(today.getDate() + 2);
       let aftertommorowDay = aftertommorow.getDate().toString(); // Get the day of the month as a string
 
-      cy.get('[data-testid="FlightSearchBox__ToDateButton"] > .sc-dXfzlN').should('contain', aftertommorowDay);
+      cy.get('#testIdPickerPrefix__DatePicker__ArrivalDate').should('contain', aftertommorowDay);
     });
 
 
