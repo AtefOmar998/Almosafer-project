@@ -27,14 +27,14 @@ describe("Almosafer Final Project", () => {
       let today = new Date(); 
       let tomorrow = new Date();
       tomorrow.setDate(today.getDate() + 1);
-      let tomorrowDay = tomorrow.getDate().toString();
+      let tomorrowDay = tomorrow.getDate().toString(); // Get the day of the month as a string
 
       cy.get('[data-testid="FlightSearchBox__FromDateButton"] > .sc-dXfzlN').should('contain', tomorrowDay); 
 
       // Test case 7: Verify that the flight return date is set to today + 2 by default
       let aftertommorow = new Date();
       aftertommorow.setDate(today.getDate() + 2);
-      let aftertommorowDay = aftertommorow.getDate().toString();
+      let aftertommorowDay = aftertommorow.getDate().toString(); // Get the day of the month as a string
 
       cy.get('[data-testid="FlightSearchBox__ToDateButton"] > .sc-dXfzlN').should('contain', aftertommorowDay);
     });
