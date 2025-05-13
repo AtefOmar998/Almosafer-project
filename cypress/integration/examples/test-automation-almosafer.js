@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Almosafer Final Project", () => {
-    it.skip("Verify Header Elements", () => {
+    it("Verify Header Elements", () => {
       cy.visit("https://www.almosafer.com/en");
   
       // Test case 1: Verify that the language is ENGLISH
@@ -17,7 +17,7 @@ describe("Almosafer Final Project", () => {
       cy.get('.sc-ekulBa').should('be.visible');
     });
   
-    it.skip("Verify Search Tab and Default Flight Date", () => {
+    it("Verify Search Tab and Default Flight Date", () => {
       cy.visit("https://www.almosafer.com/en");
   
       // Test case 5: Verify that the "Flights" tab is selected by default
@@ -41,7 +41,7 @@ describe("Almosafer Final Project", () => {
 
 
 // Test case 8: Randomly change language from EN to AR and vice versa
-it.skip("Randomly change language from EN to AR and vice versa", () => {
+it("Randomly change language from EN to AR and vice versa", () => {
     let websites = ["https://www.almosafer.com/en", "https://www.almosafer.com/ar"]; // Add array of websites to visit
     let randomIndex = Math.floor(Math.random() * websites.length); // Take a randor number of the tall of the array
     let randomWebsite = websites[randomIndex]; // Ranodmly select a website from the array
@@ -62,7 +62,7 @@ it.skip("Randomly change language from EN to AR and vice versa", () => {
 
 
 // Test case 9: Randomly change language from EN to AR for the website and hotels and vice versa
-  it.skip("Randomly change between the locations in hotels tab", () => {
+  it("Randomly change between the locations in hotels tab", () => {
     let websites = ["https://www.almosafer.com/en", "https://www.almosafer.com/ar"]; // Add array of websites to visit
     let randomIndex = Math.floor(Math.random() * websites.length); // Take a randor number of the tall of the array
 
