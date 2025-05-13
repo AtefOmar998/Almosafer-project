@@ -4,18 +4,20 @@
 describe("Test Register almosafer", () => {
     it.skip("Register", () => {
         
-        let name = ["Ali", "Mohammed", "Sara", "Fatima"];
+        let name = ["Ali", "Mohammed", "Sara", "Fatima"]; // to add a random names 
         let randomName = Math.floor(Math.random() * name.length);
 
     
-        let email = ["@yahoo.com", "@gmail.com", "@hotmail.com"];
+        let email = ["@yahoo.com", "@gmail.com", "@hotmail.com"]; // to add a random email
         let randomEmail = Math.floor(Math.random() * email.length);
 
-        let passwords = ["Password123!", "SecurePass456@", "MyPass789#", "Test@1234"]; 
+        let passwords = ["Password123!", "SecurePass456@", "MyPass789#", "Test@1234"]; // to add a random password 
         let randomPasswordIndex = Math.floor(Math.random() * passwords.length); 
 
         let fullname= name[randomName];
-        let fullemail = fullname.toLowerCase() + Math.floor(Math.random() * 1000) + email[randomEmail];
+
+        // Generate a random email address and all the names should be in lowercase and Math.random to change the number when we need to register with a new email
+        let fullemail = fullname.toLowerCase() + Math.floor(Math.random() * 1000) + email[randomEmail]; 
         let randomPassword = passwords[randomPasswordIndex]; 
 
 
